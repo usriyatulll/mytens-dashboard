@@ -14,11 +14,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .navbar{
+        transition: background-color 0.3s;
+      }
+    </style>
   </head>
   <body class="font-sans bg-gray-200">
     <div class="flex">
       <!-- sidebar -->
-      <aside class="w-52 bg-slate-900 text-white min-h-screen">
+      <aside class="w-52 bg-slate-900 text-white min-h-screen fixed z-10">
         <div class="p-4 flex items-center justify-center">
           <img src="../../img/logo-light.png" alt="" class="w-24" />
         </div>
@@ -35,148 +40,299 @@
       </aside>
 
       <!-- main content -->
-      <main class="flex-1 p-8">
-        <header class="flex items-center justify-between block">
-          <div>
-            <h2 class="text-xl font-bold">Semangat Pagi, JUNIKE PATRICIA</h2>
-            <p>Periode Data Tampil: 01 Jan 2024 - 10 Jan 2025</p>
-          </div>
-          <div class="flex items-center">
-            <span class="mr-4">HERO - HOTD</span>
-            <img src="../../img/people-1.png" alt="User" class="w-10 h-10 rounded-full" />
-          </div>
-        </header>            
-
-        <!-- Content Section -->
-        <section class="mt-6 bg-white p-4 rounded-lg">
-            <div class="grid grid-cols-12">
-            </div>
-            <!-- section left -->
-             <div class="col-span-8">
-                 <div class="flex items-center justify-between mb-6">
-                     <h2 class="text-xl font-bold">Point of Interest</h2>
-                     <a href="#" class="text-black font-semibold">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
-                 </div>
-                 <!-- proses berjalan -->
-                 <div class="bg-green-600 p-4 rounded-lg pb-6 ">
-                     <p class="font-bold text-white mb-2">Proses Berjalan Bulan January 2025</p>
-                     <div class="grid grid-cols-2 gap-6 ">
-                         <!-- POI Validation Card -->
-                         <div class="bg-white p-6 rounded-lg shadow flex">
-                                 <div class="items-center justify-center ">
-                                     <i class="fa-regular fa-circle-check bg-gray-200 px-2 py-8 rounded-lg"></i>
-                                 </div>
-                                 <div >
-                                     <h3 class="text-lg font-bold ml-4">Validasi POI</h3>
-                                     <div class="grid grid-cols-3 ml-4">
-                                       <div class="flex flex-col items-center">
-                                         <span>Target Validasi POI</span>
-                                         <span>0</span>
-                                       </div>
-                                       <div class="flex flex-col items-center">
-                                         <span>Realisasi</span>
-                                         <span>0</span>
-                                       </div>
-                                       <div class="flex flex-col items-center">
-                                         <span>Achievement</span>
-                                         <span>0</span>
-                                       </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <!-- POI Pengajuan Baru Card -->
-                             <div class="bg-white p-6 rounded-lg shadow flex">
-                                 <div class="items-center justify-center ">
-                                     <i class="fa-regular fa-circle-check bg-gray-200 px-2 py-8 rounded-lg"></i>
-                                 </div>
-                                 <div >
-                                     <h3 class="text-lg font-bold ml-4">Pengajuan POI Baru </h3>
-                                     <div class="grid grid-cols-3 ml-4">
-                                       <div class="flex flex-col items-center">
-                                         <span>Pengajuan POI Baru</span>
-                                         <span>0</span>
-                                       </div>
-                                       <div class="flex flex-col items-center">
-                                         <span>Disetujui</span>
-                                         <span>0</span>
-                                       </div>
-                                     </div>
-                                 </div>
-                             </div>
-                     </div>
-                  </div>
-                  <div class="grid grid-cols-2 gap-4 m-2 ml-0">
-                      <!-- Total Pengajuan POI Baru Card -->
-                      <div class="bg-white p-6 rounded-lg border-gray-200 border-2">
-                        <div  class="flex">
-                            <div class="-ml-2">
-                                <i class="fa-solid fa-box-archive bg-gray-200 px-4 py-4 rounded-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold ml-2">Total Pengajuan POI Baru</h3>
-                                <p class="text-md font-bold ml-2">495</p>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 flex mt-1 gap-6">
-                        <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
-                            <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
-                            <div class="ml-1">
-                                <p>Pengajuan</p>
-                                <p>16</p>
-                            </div>
-                          </div>
-                          <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
-                            <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
-                            <div class="ml-1">
-                                <p>Disetujui</p>
-                                <p>479</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="-m-2"> 
-                            <p class="text-gray-600 mt-4 text-sm">Source: MyIndibiz Assistant dan MyTeNS</p>
-                            <p class="text-gray-600 text-sm">Terakhir MyIndibiz Assistant update data: 10 Jan 2025, 07:22 WIB</p>
-                        </div>
-                      </div>
-          
-                      <!-- Total Keseluruhan POI Card -->
-                      <div class="bg-white p-6 rounded-lg shadow border-2">
-                        <h3 class="text-lg font-bold">Total Keseluruhan POI</h3>
-                        <div class="mt-4">
-                          <div class="flex justify-between">
-                            <span>Data Mentah</span>
-                            <span>31,183</span>
-                          </div>
-                          <div class="flex justify-between">
-                            <span>Proses Survei</span>
-                            <span>2</span>
-                          </div>
-                          <div class="flex justify-between">
-                            <span>Proses Approval</span>
-                            <span>0</span>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Total Sales Agent Card -->
-                      <div class="bg-white p-6 rounded-lg shadow border-2">
-                        <h3 class="text-lg font-bold">Total Sales Agent</h3>
-                        <div class="mt-4">
-                          <div class="flex justify-between">
-                            <span>Agents</span>
-                            <span>2</span>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+      <main class="flex-1 p-8 ml-48">
+        <!-- header -->
+         <div  id="navbar" class="navbar fixed top-0 z-0 left-0 w-full p-4 bg-gray-200 shadow-">
+           <header class="flex items-center justify-between">
+             <div class="ml-56">
+               <h2 class="text-xl font-bold">Semangat Pagi, JUNIKE PATRICIA</h2>
+               <p>Periode Data Tampil: 01 Jan 2024 - 10 Jan 2025</p>
              </div>
-             <!-- section right -->
-              <div class="col-span-4">
+             <div class="flex content-end">
+               <span class="mr-4">HERO - HOTD</span>
+               <img src="../../img/people-1.png" alt="User" class="w-10 h-10 rounded-full" />
+             </div>
+           </header>
+         </div>
+
+        
+        <!-- Content Section -->
+        <section class="mt-24 bg-gray-200 rounded-lg">
+          <div class="grid grid-cols-12 gap-6">
+            <!-- section left -->
+            <div class="col-span-8 bg-white p-4 rounded-lg border-gray-200 border-2">
+              <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-bold">Point of Interest</h2>
+                <a href="#" class="text-black font-semibold">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <!-- proses berjalan -->
+              <div class="bg-green-600 p-4 rounded-lg pb-6">
+                <p class="font-bold text-white mb-2">Proses Berjalan Bulan January 2025</p>
+                <div class="grid grid-cols-2 gap-6">
+                  <!-- POI Validation Card -->
+                  <div class="bg-white p-6 rounded-lg shadow flex">
+                    <div class="items-center justify-center">
+                      <i class="fa-regular fa-circle-check bg-gray-200 px-2 py-8 rounded-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold ml-4">Validasi POI</h3>
+                      <div class="grid grid-cols-3 ml-4 text-xs">
+                        <div class="flex flex-col items-center">
+                          <span>Target Validasi POI</span>
+                          <span>0</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <span>Realisasi</span>
+                          <span>0</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <span>Achievement</span>
+                          <span>0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- POI Pengajuan Baru Card -->
+                  <div class="bg-white p-6 rounded-lg shadow flex text-xs">
+                    <div class="items-center justify-center">
+                      <i class="fa-regular fa-circle-check bg-gray-200 px-2 py-8 rounded-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold ml-4">Pengajuan POI Baru</h3>
+                      <div class="grid grid-cols-2 ml-4">
+                        <div class="flex flex-col items-center">
+                          <span>Pengajuan POI Baru</span>
+                          <span>0</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <span>Disetujui</span>
+                          <span>0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4 m-2 ml-0">
+                <!-- Total Pengajuan POI Baru Card -->
+                <div>
+                  <div class="bg-white p-6 rounded-lg border-gray-200 border-2">
+                    <div class="flex">
+                      <div class="-ml-2">
+                        <i class="fa-solid fa-box-archive bg-gray-200 px-4 py-4 rounded-lg"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold ml-2">Total Pengajuan POI Baru</h3>
+                        <p class="text-md font-bold ml-2">495</p>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 flex mt-1 gap-6">
+                      <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
+                        <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                        <div class="ml-1">
+                          <p>Pengajuan</p>
+                          <p>16</p>
+                        </div>
+                      </div>
+                      <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
+                        <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                        <div class="ml-1">
+                          <p>Disetujui</p>
+                          <p>479</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-m-2">
+                      <p class="text-gray-600 mt-4 text-sm">Source: MyIndibiz Assistant dan MyTeNS</p>
+                      <p class="text-gray-600 text-sm">Terakhir MyIndibiz Assistant update data: 10 Jan 2025, 07:22 WIB</p>
+                    </div>
+                  </div>
+                  <!-- Sales Agent -->
+                  <div class="bg-white p-6 rounded-lg shadow border-2 mt-2">
+                    <h3 class="text-lg font-bold">Total Sales Agent</h3>
+                    <div class="mt-4">
+                      <div class="flex">
+                        <div class="-ml-2">
+                          <i class="fa-solid fa-box-archive bg-gray-200 px-4 py-4 rounded-lg"></i>
+                        </div>
+                        <div>
+                          <h3 class="text-lg font-bold ml-2">Total Sales Agent</h3>
+                          <p class="text-md font-bold ml-2">495</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-m-2">
+                      <p class="text-gray-600 mt-4 text-sm">Source: MyIndibiz Assistant dan MyTeNS</p>
+                      <p class="text-gray-600 text-sm">Terakhir MyIndibiz Assistant update data: 10 Jan 2025, 07:22 WIB</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Total Keseluruhan POI Card -->
+                <div class="bg-white p-6 rounded-lg border-gray-200 border-2">
+                  <div class="flex">
+                    <div class="-ml-2">
+                      <i class="fa-solid fa-box-archive bg-gray-200 px-4 py-4 rounded-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold ml-2">Total Keseluruhan POI</h3>
+                      <p class="text-md font-bold ml-2">31.185</p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 grid-row-3 flex mt-1 gap-6">
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Data Mentah</p>
+                        <p>31.183</p>
+                      </div>
+                    </div>
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Proses Survei</p>
+                        <p>2</p>
+                      </div>
+                    </div>
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex -mt-3">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Proses Survei</p>
+                        <p>2</p>
+                      </div>
+                    </div>
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex -mt-3">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Proses Survei</p>
+                        <p>2</p>
+                      </div>
+                    </div>
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex -mt-3">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Proses Survei</p>
+                        <p>2</p>
+                      </div>
+                    </div>
+                    <div class="bg-white border-2 p-3 -ml-2 border-gray-200 rounded-lg flex">
+                      <i class="fa-solid fa-upload bg-gray-200 px-3 py-3 rounded-lg"></i>
+                      <div class="ml-1">
+                        <p>Proses Survei</p>
+                        <p>2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="-m-2">
+                    <p class="text-gray-600 mt-4 text-sm">Source: MyIndibiz Assistant dan MyTeNS</p>
+                    <p class="text-gray-600 text-sm">Terakhir MyIndibiz Assistant update data: 10 Jan 2025, 07:22 WIB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- section right -->
+            <div class="col-span-4 bg-white p-12 rounded-lg border-2 border-gray-250">
+              <div class="-m-6">
+
+                <h1 class="text-xl font-semibold mb-3">Aktivitas</h1>
+                <div class="h-screen overflow-y-scroll h-60 ">
+
+                  <!-- Aktivitas 1 -->
+                  <div class=" border-2 p-4 rounded-lg">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mb-2">
+                      <span>09 Jan 2025 • 11:53 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Administrasi</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">BANK PERMATA</h2>
+                    <p class="text-gray-600">proyek lama mobile</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+  
+                  <!-- Aktivitas 2 -->
+                  <div class="mt-2 border-2 p-4 rounded-lg">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mb-2">
+                      <span>09 Jan 2025 • 15:49 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded">Follow-up</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">BANK PERMATA</h2>
+                    <p class="text-gray-600">ios test</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+  
+                  <!-- Aktivitas 3 -->
+                  <div class=" mt-2 border-2 p-4 rounded-lg">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mt-2 ">
+                      <span>09 Jan 2025 - 01 Feb 2025 • 00:00 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded text-center">Koordinasi internal</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">Tanpa Pelanggan</h2>
+                    <p class="text-gray-600">test</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+                   <!-- Aktivitas 4 -->
+                   <div class=" border-2 p-4 rounded-lg mt-2">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mb-2">
+                      <span>09 Jan 2025 - 01 Feb 2025 • 00:00 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded text-center">Koordinasi internal</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">Tanpa Pelanggan</h2>
+                    <p class="text-gray-600">test</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+                   <!-- Aktivitas 4 -->
+                   <div class=" border-2 p-4 rounded-lg mt-2">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mb-2">
+                      <span>09 Jan 2025 - 01 Feb 2025 • 00:00 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded text-center">Koordinasi internal</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">Tanpa Pelanggan</h2>
+                    <p class="text-gray-600">test</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+                   <!-- Aktivitas 4 -->
+                   <div class=" border-2 p-4 rounded-lg mt-2">
+                    <div class="flex items-center justify-between text-gray-500 text-sm mb-2">
+                      <span>09 Jan 2025 - 01 Feb 2025 • 00:00 WIB</span>
+                      <span class="bg-yellow-200 text-yellow-800 text-xs font-medium px-2 py-1 rounded flex text-center">Koordinasi internal</span>
+                    </div>
+                    <h2 class="text-gray-800 font-medium">Tanpa Pelanggan</h2>
+                    <p class="text-gray-600">test</p>
+                    <a href="#" class="text-blue-500 text-sm font-medium mt-2 inline-block">Lihat Detail &rarr;</a>
+                  </div>
+                   <!-- Tombol Lihat Lebih Banyak -->
+                    <button class="text-black text-sm font-medium mt-4 flex items-center justify-center">
+                      <span >Lihat Lebih Banyak</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                  </button>
+                </div>
+                <!-- Footer -->
+                <div class="mt-1 text-gray-500 text-sm pt-4">
+                  <p>Source: MyTEnS</p>
+                  <p>Terakhir MyTEnS update data: 10 Jan 2025, 08:54 WIB</p>
+                </div>
 
               </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
+
+    <script>
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 0) {
+              navbar.classList.add('bg-white');
+              navbar.classList.remove('bg-gray-200');
+          } else {
+              navbar.classList.add('bg-gray-200');
+              navbar.classList.remove('bg-white');
+          }
+      });
+  </script>
+
   </body>
 </html>
